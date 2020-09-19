@@ -1,0 +1,99 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+
+}
+p{
+  color: #222;
+
+}
+
+.containerr {
+  position: relative;
+  width: 1000px;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  background: #222;
+}
+.containerr .cardd {
+  position: relative;
+  height: 250px;
+  background: #fff;
+  display: flex;
+  width: 45%;
+  margin: 40px 25px;
+  margin-right: auto;
+  justify-content: space-evenly;
+}
+.containerr .cardd .imgbx {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #333;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  transition: 0.5s ease-in-out;
+}
+.containerr .cardd:hover .imgbx {
+  width: 150px;
+  height: 150px;
+  left: -75px;
+  top: calc(50% - 75px);
+  transition: 0.5s ease-in-out;
+  background: #ff0057;
+}
+.containerr .cardd .imgbx:before {
+  content: attr(data-text);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 2em;
+  color: rgba(255, 255, 255, 0.05);
+  font-weight: 700;
+}
+.containerr .cardd .imgbx img {
+  max-width: 100px;
+  transition: 0.5s ease-in-out;
+}
+.containerr .cardd:hover .imgbx img {
+  max-width: 75px;
+}
+.containerr .cardd .contentt {
+  position: absolute;
+  right: 0;
+  width: calc(100% - 75px);
+  height: 100%;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.containerr .cardd .contentt .h
+ {
+   margin-bottom: 5px;
+   font-size: 24px;
+}
+
+.containerr .card .contentt a{
+
+  display: inline-block;
+  margin-top: 10px;
+  padding: 5px 10px;
+  background: #333;
+  text-decoration: none;
+  color: #fff;
+}

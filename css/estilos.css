@@ -1,0 +1,665 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+:root {
+  --rojo: #e50914;
+  --fondo: #141414;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+}
+
+body {
+  background: var(--fondo);
+  font-family: "Open Sans", sans-serif;
+}
+section{
+    margin-left: 10%;
+}
+
+.contenedor {
+  width: 90%;
+  margin: auto;
+}
+nav {
+  display: block;
+  margin: 0 0 0 20px;
+  position: relative;
+  font: 20px Tahoma, sans-serif;
+}
+nav ul {
+  padding: 0;
+  margin: 0;
+}
+nav li {
+  position: relative;
+  float: left;
+  list-style-type: none;
+}
+nav li a {
+  display: block;
+  padding: 10px 20px;
+  border-left: 1px solid #999;
+
+  color: #777;
+  text-decoration: none;
+  
+}
+nav ul:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+nav li a:focus {
+  outline: none;
+  text-decoration: underline;
+}
+
+nav li:first-child a {
+  border-left: none;
+}
+nav li.ultimo a {
+  border-right: none;
+}
+nav li:hover ul {
+  display: block;
+}
+nav a span {
+  display: block;
+  float: right;
+  margin-left: 5px;
+}
+nav ul ul {
+  display: none;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  z-index: 10;
+}
+nav ul ul li {
+  float: none;
+}
+nav ul ul a {
+  padding: 5px 10px;
+  border-left: none;
+  border-right: none;
+  font-size: 20px;
+}
+nav ul a span {
+  -moz-transform: rotate(-180deg);
+  -webkit-transform: rotate(-180deg);
+  transform: rotate(-180deg);
+}
+nav ul ul a:hover {
+  background-color: rgba(19, 18, 17, 0.9);
+}
+nav ul ul {
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.8);
+  background-color: rgba(19, 18, 17, 0.9);
+}
+.log{
+  color: rgb(170, 160, 160);
+}
+.col{
+  color: #e50914;
+}
+
+h3 {
+  color: #e50914;
+  font-size: 30px;
+}
+a {
+  color: #fff;
+}
+header {
+  padding: 30px 0;
+  color: #fff;
+}
+p {
+  color: aliceblue;
+  padding-bottom: 22px;
+}
+
+header .contenedor {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .logotipo {
+  font-family: "Bebas Neue", cursive;
+  font-weight: normal;
+  color: var(--rojo);
+  font-size: 70px;
+}
+
+header nav a {
+  color: #aaa;
+  text-decoration: none;
+  margin-right: 20px;
+}
+
+header nav a:hover,
+header nav a.activo {
+  color: #fff;
+}
+
+.header {
+  z-index: 1000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background: -webkit-linear-gradient(left, var(--color-primario), #ee9389);
+  display: flex;
+  box-shadow: #888 0px 0px 20px;
+} 
+
+.header__contenedor {
+  display: flex;
+  flex: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header__logo {
+  width: 200px;
+  text-align: center;
+  padding: 10px 0;
+}
+
+.header__logo img {
+  height: 100%;
+}
+
+.header__navegacion {
+  flex: 1;
+  display: flex;
+}
+.header__lista {
+  flex: 1;
+  list-style: none;
+  display: flex;
+  border-radius: 4px;
+}
+.header__item .header__item{
+  display: block;
+  margin: 0 auto 20px;
+  border: 1px solid #e84d3b;
+  position: relative;
+  background: url("nav_background.png");
+  font: 16px Tahoma, sans-serif;
+}
+
+
+
+.header__item {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.2s ease-in;
+}
+
+.header__item:hover {
+  background-color: var(--color-primario);
+  flex: 1.4;
+}
+
+.header__link {
+  text-decoration: none;
+  color: white;
+}
+
+.card {
+  height: 400px;
+  width: 300px;
+  background-color: white;
+  cursor: pointer;
+  border-radius: 2px;
+  overflow: hidden;
+  margin: 20px;
+}
+.card,
+.card * {
+  transition: all 0.2s ease;
+}
+
+.card__imagen {
+  height: 60%;
+  overflow: hidden;
+  position: relative;
+}
+
+.card__imagen img {
+  width: 100%;
+  transform: translate(0, -60px);
+}
+
+.card__photos {
+  position: absolute;
+  bottom: 0;
+  background-color: var(--color-primario);
+  color: white;
+  padding: 8px 11px;
+  border-radius: 1px;
+}
+
+.card__fecha {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background-color: var(--color-primario);
+  color: white;
+  top: 10px;
+  right: 10px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 0.8rem;
+  padding-top: 7px;
+}
+
+.card__fecha span {
+  font-size: 0.6rem;
+}
+
+.card__info {
+  padding: 20px;
+  position: relative;
+  height: 40%;
+}
+
+.card__subtitulo {
+  color: var(--color-primario);
+  margin-top: 5px;
+}
+
+.card__feed {
+  color: #888;
+  position: absolute;
+  bottom: 20px;
+}
+
+.card__descripcion {
+  margin-top: 5px;
+  font-size: 0.8rem;
+  color: rgb(104, 78, 78);
+  line-height: 1.1rem;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.card:hover .card__imagen {
+  height: 40%;
+}
+
+.card:hover .card__imagen img {
+  filter: brightness(0.5);
+}
+
+.card:hover .card__info {
+  height: 60%;
+}
+
+.card:hover .card__descripcion {
+  visibility: visible;
+  opacity: 1;
+}
+.card:hover {
+  box-shadow: #bbb 0px 0px 20px;
+  transform: scale(1.05);
+}
+.menu {
+  background-color: rgb(233, 172, 166);
+  min-width: 0px;
+  height: calc(100vh - 60px);
+  position: fixed;
+  top: 60px;
+  left: 0;
+}
+.principal {
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-left: 0px;
+}
+.principal1 {
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-left: 0px;
+}
+.main {
+  display: flex;
+  min-height: calc(100vh - 60px);
+}
+
+footer{
+  width: 100%;
+  background: #202020;
+  color: white;   
+  font-size: small;
+  
+}
+
+.container-footer-all{
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 40px;
+}
+
+.container-body{
+  display: flex;
+  justify-content: space-between;
+}
+
+.colum1{
+  max-width: 400px;
+}
+
+.colum1 h1{
+  font-size: 22px;
+}
+
+.colum1 p{
+  font-size: 14px;
+  color: #C7C7C7;
+  margin-top: 20px;
+}
+
+.colum2{
+  max-width: 400px;
+  
+}
+
+.colum2 h1{
+  font-size: 22px;
+}
+
+.row{
+  margin-top: 20px;
+  display: flex;
+}
+
+.row img{
+  width: 36px;
+  height: 36px;
+}
+
+.row label{
+  margin-top: 10px;
+  margin-left: 20px;
+  color: #C7C7C7;
+}
+
+.colum3{
+  max-width: 400px;
+}
+
+.colum3 h1{
+  font-size: 22px;
+}
+
+.row2{
+  margin-top: 20px;
+  display: flex;
+}
+
+.row2 img{
+  width: 36px;
+  height: 36px;
+}
+
+.row2 label{
+  margin-top: 10px;
+  margin-left: 20px;
+  max-width: 140px;
+}
+
+.container-footer{
+  width: 100%;  
+  background: #101010;
+}
+
+.footer{
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;  
+  padding: 20px;
+}
+
+.copyright{
+  color: #C7C7C7;
+}
+
+.copyright a{
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+.information a{
+  text-decoration: none;
+  color: #C7C7C7;
+}
+
+
+@media screen and (max-width: 1100px){
+  
+  .container-body{
+      flex-wrap: wrap;
+  }
+  
+  .colum1{
+      max-width: 100%;
+  }
+  
+  .colum2,
+  .colum3{
+      margin-top: 40px;
+  }
+}
+
+
+
+
+
+
+
+/* ---- ----- ----- Pelicula Principal ----- ----- ----- */
+.pelicula-principal {
+  font-size: 16px;
+  min-height: 40.62em;
+  color: #fff;
+  background: linear-gradient(rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%),
+    url(../img/backdrop.jpg);
+  background-position: center center;
+  background-size: cover;
+  margin-bottom: 3.12em;
+  display: flex;
+  align-items: end;
+}
+
+.pelicula-principal .contenedor {
+  margin: 0 auto;
+  margin-bottom: 6.25em;
+}
+
+.pelicula-principal .titulo {
+  font-weight: 600;
+  font-size: 3.12em;
+  margin-bottom: 0.4em;
+}
+
+.pelicula-principal .descripcion {
+  font-weight: normal;
+  font-size: 1em;
+  line-height: 1.75em;
+  max-width: 50%;
+  margin-bottom: 1.25em;
+}
+
+.pelicula-principal .boton {
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  border-radius: 0.31em;
+  padding: 0.93em 1.87em;
+  color: #fff;
+  margin-right: 1.25em;
+  cursor: pointer;
+  transition: 0.3s ease all;
+  font-size: 1.12em;
+}
+
+.pelicula-principal .boton:hover {
+  background: #fff;
+  color: #000;
+}
+
+.pelicula-principal .boton i {
+  margin-right: 1.25em;
+}
+
+/* ---- ----- ----- Contenedor Titulo y Controles ----- ----- ----- */
+.contenedor-titulo-controles {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+}
+
+.contenedor-titulo-controles h3 {
+  color: #fff;
+  font-size: 30px;
+}
+
+.contenedor-titulo-controles .indicadores button {
+  background: #fff;
+  height: 3px;
+  width: 10px;
+  cursor: pointer;
+  border: none;
+  margin-right: 2px;
+}
+
+.contenedor-titulo-controles .indicadores button:hover,
+.contenedor-titulo-controles .indicadores button.activo {
+  background: red;
+}
+
+/* ---- ----- ----- Contenedor Principal y Flechas ----- ----- ----- */
+.pelijuego-recomendadas {
+  margin-bottom: 70px;
+}
+
+.pelijuego-recomendadas .contenedor-principal {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.pelijuego-recomendadas .contenedor-principal .flecha-izquierda,
+.pelijuego-recomendadas .contenedor-principal .flecha-derecha {
+  position: absolute;
+  border: none;
+  background: rgba(0, 0, 0, 0.3);
+  font-size: 40px;
+  height: 50%;
+  top: calc(50% - 25%);
+  line-height: 40px;
+  width: 50px;
+  color: #fff;
+  cursor: pointer;
+  z-index: 500;
+  transition: 0.2s ease all;
+}
+
+.pelijuego-recomendadas .contenedor-principal .flecha-izquierda:hover,
+.pelijuego-recomendadas .contenedor-principal .flecha-derecha:hover {
+  background: rgba(0, 0, 0, 0.9);
+}
+
+.pelijuego-recomendadas .contenedor-principal .flecha-izquierda {
+  left: 0;
+}
+
+.pelijuego-recomendadas .contenedor-principal .flecha-derecha {
+  right: 0;
+}
+
+/* ---- ----- ----- Carousel ----- ----- ----- */
+.pelijuego-recomendadas .contenedor-carousel {
+  width: 100%;
+  padding: 20px 0;
+  overflow: hidden;
+  scroll-behavior: smooth;
+}
+
+.pelijuego-recomendadas .contenedor-carousel .carousel {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.pelijuego-recomendadas .contenedor-carousel .carousel .pelicula {
+  min-width: 20%;
+  transition: 0.3s ease all;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.pelijuego-recomendadas .contenedor-carousel .carousel .pelicula.hover {
+  transform: scale(1.2);
+  transform-origin: center;
+}
+
+.pelijuego-recomendadas .contenedor-carousel .carousel .pelicula img {
+  width: 100%;
+  vertical-align: top;
+}
+
+/* ---- ----- ----- Media Queries ----- ----- ----- */
+@media screen and (max-width: 800px) {
+  header .logotipo {
+    margin-bottom: 10px;
+    font-size: 30px;
+  }
+
+  header .contenedor {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .pelicula-principal {
+    font-size: 14px;
+  }
+
+  .pelicula-principal .descripcion {
+    max-width: 100%;
+  }
+
+  .pelijuego-recomendadas .contenedor-carousel {
+    overflow: visible;
+  }
+
+  .pelijuego-recomendadas .contenedor-carousel .carousel {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  .pelijuego-recomendadas .indicadores,
+  .pelijuego-recomendadas .flecha-izquierda,
+  .pelijuego-recomendadas .flecha-derecha {
+    display: none;
+  }
+}
